@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Examples</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        button {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Task 1: Change content of <p> -->
+    <div id="myElement"> 
+        <p id="welcomeMessage">Welcome to my website!</p> 
+    </div>
+    <button onclick="changeContent()">Change Content</button>
+
+    <script>
+        function changeContent() {
+            document.getElementById("welcomeMessage").innerText = "Hello there!";
+        }
+    </script>
+
+    <hr>
+
+    <!-- Task 2: Validate input -->
+    <input type="text" id="userInput" placeholder="Enter a number"> 
+    <button onclick="checkInput()">Check</button> 
+
+    <script>
+        function checkInput() {
+            let userInput = document.getElementById("userInput").value;
+            let number = Number(userInput);
+
+            if (isNaN(number)) {
+                alert("Please insert a number!");
+            } else if (number < 10) {
+                alert("The number is lower than 10");
+            } else {
+                alert("The number is higher than 10");
+            }
+        }
+    </script>
+
+    <hr>
+
+    <!-- Task 3: Complete the JavaScript code -->
+    <p id="demo"></p> 
+
+    <script> 
+        let text = ""; 
+        
+        // Loop from 1 to 5
+        for (let i = 1; i <= 5; i++) { 
+            text += "The number is " + i + "<br>"; 
+        } 
+        
+        document.getElementById("demo").innerHTML = text; 
+    </script>
+
+</body>
+</html>
